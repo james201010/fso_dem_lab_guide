@@ -20,7 +20,7 @@ This use case covers the integration with ThousandEyes to illustrate how you can
 
 <!-- LITE -->
 
-<span style="color: #143c76;"><i class='fas fa-circle fa-sm'></i></span>&nbsp; Use the credentials used previously to <a href="https://lt.fsolabs.net/20_lab_environment_lt/21_lab_login_steps.html#login-to-thousandeyes" target="_blank">**login to ThousandEyes**</a> if you've been logged out.
+<span style="color: #143c76;"><i class='fas fa-circle fa-sm'></i></span>&nbsp; Use the credentials used previously to [**login to ThousandEyes**]({{< ref "/10_lab_access.html#login-to-thousandeyes" >}} "login to ThousandEyes") if you've been logged out.
 
 <!-- LITE -->
 

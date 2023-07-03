@@ -2,7 +2,7 @@ baseURL = "/"
 languageCode = "en-US"
 defaultContentLanguage = "en"
 
-title = "Full Stack Observability Labs: Performance"
+title = "Full Stack Observability Labs"
 theme = "hugo-theme-learn"
 metaDataFormat = "yaml"
 defaultContentLanguageInSubdir= "true"
@@ -80,8 +80,8 @@ name = "aws-s3"
 #cloudFrontDistributionID = "E2J019Z1QMEF6L"
 
 # LITE
-URL = "s3://lt-performance-fsolabs-net-static-si-s3bucketroot-xgbjrok3tmw0?region=us-east-1"
-cloudFrontDistributionID = "E272YEQOMTGATX"
+#URL = "s3://lt-performance-fsolabs-net-static-si-s3bucketroot-xgbjrok3tmw0?region=us-east-1"
+#cloudFrontDistributionID = "E272YEQOMTGATX"
 
 # !!! PER LITE VS FULL END !!!
 

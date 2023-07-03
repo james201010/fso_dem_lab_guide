@@ -6,7 +6,7 @@ weight = 1
 
 ## Introduction
 
-In this section we'll walk through the steps to login to AppDynamics and login to ThousandEyes.
+In this section we'll walk through the steps to login to **AppDynamics** and login to **ThousandEyes**.
 
 
 <br>
