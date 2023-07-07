@@ -20,10 +20,12 @@ date: 2021-01-25T12:52:26-07:00
 * AppOps: By improving triage capabilities for the internet and deployment environments
 * NetOps: By quickly identifying or eliminating the network as root cause when an issue occurs
 
-## Section's Structure  
-This section covers four main topics:
+## Workshop Structure  
 
+This workshop covers four main topics:
 
+* [Lab Access]({{< ref "/10_Lab_Access.html" >}} "Lab Access")
+* [Configuration Overview]({{< ref "/20_Config_Overview.html" >}} "Configuration Overview")
 * [Customer Digital Experience Monitoring]({{< ref "/30_Digital_Experience_Monitoring.html" >}} "Customer Digital Experience Monitoring")
 * [Application Dependency Monitoring]({{< ref "/40_App_Dependency_Monitoring.html" >}} "Application Dependency Monitoring")
 

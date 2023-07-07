@@ -8,6 +8,7 @@ weight = 2
 
 In this section, you will walk through the configuration steps for integrating AppDynamics and ThousandEyes. These steps are necessary if you are doing a greenfield integration of the two platforms, but your lab environment will have this preconfigured. The following sections are provided as a configuration reference, but the steps are not intended to be replicated in your lab environment. If the section title is preceded by *(Reference)*, the steps in that section have already been performed in the lab environment.
 
+<span style="color: #ff9900;"><i class='fas fa-cog fa-spin fa-lg'></i></span>&nbsp; **Hold On A Second ...**
 
 <br>
 
@@ -96,21 +97,32 @@ Some text here ...
 
 ![image](/images/20_config_overview/example-image.png)
 
+=======
+While the configuration steps for the AppDynamics and ThousandEyes integration are defined below, **these steps have already been done for you in this workshop**.  The steps are here for your <span style="color: #ff9900;"><i class='fas fa-cog fa-spin fa-sm'></i></span>&nbsp;Reference Only&nbsp;<span style="color: #ff9900;"><i class='fas fa-cog fa-spin fa-sm'></i></span> so you have all the steps documented that were part of the complete setup process.
+
 
 
 <br>
 
+
 ## **(Reference)** Configure Alert Notifications
 
 Some text here ...
+=======
+## Section Topics Covered
 
-![image](/images/20_config_overview/example-image.png)
+
+- [OAuth Token Configuration]({{< ref "/21_oauth_token_config" >}} "OAuth Token Configuration")&nbsp;&nbsp; - &nbsp;&nbsp;<span style="color: #ff9900;"><i class='fas fa-cog fa-spin fa-sm'></i></span>&nbsp;Reference Only&nbsp;<span style="color: #ff9900;"><i class='fas fa-cog fa-spin fa-sm'></i></span>
+- [Manually Match TE Tests]({{< ref "/22_manually_match_tests" >}} "Manually Match TE Tests")&nbsp;&nbsp; - &nbsp;&nbsp;<span style="color: #ff9900;"><i class='fas fa-cog fa-spin fa-sm'></i></span>&nbsp;Reference Only&nbsp;<span style="color: #ff9900;"><i class='fas fa-cog fa-spin fa-sm'></i></span>
+- [TE Test Recommendations]({{< ref "/23_test_recommendations" >}} "TE Test Recommendations")&nbsp;&nbsp; - &nbsp;&nbsp;<span style="color: #ff9900;"><i class='fas fa-cog fa-spin fa-sm'></i></span>&nbsp;Reference Only&nbsp;<span style="color: #ff9900;"><i class='fas fa-cog fa-spin fa-sm'></i></span>
+- [TE Alert Notifications]({{< ref "/24_alert_notifications" >}} "TE Alert Notifications")&nbsp;&nbsp; - &nbsp;&nbsp;<span style="color: #ff9900;"><i class='fas fa-cog fa-spin fa-sm'></i></span>&nbsp;Reference Only&nbsp;<span style="color: #ff9900;"><i class='fas fa-cog fa-spin fa-sm'></i></span>
+- [Create DashStudio Dashboard]({{< ref "/24_alert_notifications" >}} "Create DashStudio Dashboard")&nbsp;&nbsp; - &nbsp;&nbsp;<span style="color: #143c76;"><i class='fas fa-cog fa-spin fa-sm'></i></span>&nbsp;Hands-On Exercise&nbsp;<span style="color: #143c76;"><i class='fas fa-cog fa-spin fa-sm'></i></span>
 
 
 <br>
 
 ## Next <span style="color: #143c76;"><i class='fas fa-cog fa-spin fa-sm'></i></span>&nbsp;
 
-We'll walk through the configuration for the **ThousandEyes** and **AppDynamics** integration.
+We'll walk through the steps to create the **OAuth Beare Token** in **ThousandeEyes** and configure it in the **AppDynamics** controller.
 
 <br>
