@@ -1,7 +1,7 @@
 +++
 title = "Manually Match TE Tests"
 chapter = false
-weight = 2
+weight = 3
 +++
 
 ## Introduction
