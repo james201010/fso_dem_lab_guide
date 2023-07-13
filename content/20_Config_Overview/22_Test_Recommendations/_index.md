@@ -17,6 +17,7 @@ In this section, you will learn how to integrate ThousandEyes and AppDynamics to
 <span style="color: #143c76;"><i class='fas fa-circle fa-sm'></i></span>&nbsp; Configure bi-directional integration with **Test Recommendations** in the ThousandEyes platform.
 
 1. In the left menu, select **Integrations** and click on **+ New Integration**
+    - Select **AppDynamics** integration when prompted
 2. Provide the integration details, and make sure you select **Test Recommendations** radio button
     - You can use basic authentication or API client from AppDynamics
 3. Click the **Test** button to ensure that communication works with the specified credentials
