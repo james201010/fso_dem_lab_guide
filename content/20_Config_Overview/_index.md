@@ -22,7 +22,7 @@ In this section, you will walk through the configuration steps for integrating A
 - [TE Test Recommendations]({{< ref "/22_test_recommendations" >}} "TE Test Recommendations")&nbsp;&nbsp; - &nbsp;&nbsp;<span style="color: #ff9900;"><i class='fas fa-cog fa-spin fa-sm'></i></span>&nbsp;Reference Only&nbsp;<span style="color: #ff9900;"><i class='fas fa-cog fa-spin fa-sm'></i></span>
 - [Manually Match TE Tests]({{< ref "/23_manually_match_tests" >}} "Manually Match TE Tests")&nbsp;&nbsp; - &nbsp;&nbsp;<span style="color: #ff9900;"><i class='fas fa-cog fa-spin fa-sm'></i></span>&nbsp;Reference Only&nbsp;<span style="color: #ff9900;"><i class='fas fa-cog fa-spin fa-sm'></i></span>
 - [TE Alert Notifications]({{< ref "/24_alert_notifications" >}} "TE Alert Notifications")&nbsp;&nbsp; - &nbsp;&nbsp;<span style="color: #ff9900;"><i class='fas fa-cog fa-spin fa-sm'></i></span>&nbsp;Reference Only&nbsp;<span style="color: #ff9900;"><i class='fas fa-cog fa-spin fa-sm'></i></span>
-- [Create DashStudio Dashboard]({{< ref "/24_alert_notifications" >}} "Create DashStudio Dashboard")&nbsp;&nbsp; - &nbsp;&nbsp;<span style="color: #143c76;"><i class='fas fa-cog fa-spin fa-sm'></i></span>&nbsp;Hands-On Exercise&nbsp;<span style="color: #143c76;"><i class='fas fa-cog fa-spin fa-sm'></i></span>
+- [Create Dash Studio Dashboard]({{< ref "/25_dash_studio_dashboard" >}} "Create Dash Studio Dashboard")&nbsp;&nbsp; - &nbsp;&nbsp;<span style="color: #143c76;"><i class='fas fa-cog fa-spin fa-sm'></i></span>&nbsp;Hands-On Exercise&nbsp;<span style="color: #143c76;"><i class='fas fa-cog fa-spin fa-sm'></i></span>
 
 
 <br>
