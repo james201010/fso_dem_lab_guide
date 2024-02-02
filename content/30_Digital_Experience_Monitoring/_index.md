@@ -5,10 +5,10 @@ weight = 3
 hidden = false
 +++
 
-**While on a Digital Transformation journey, Erin is also concerned about the experience an end-user has while using the application from anywhere around the globe. She appreciates the importance of global Internet health if her organization wants a highly available network service and optimal digital experience for users.**
+While on a Digital Transformation journey, Erin is also concerned about the experience an end-user has while using the application from anywhere around the globe. She appreciates the importance of global Internet health if her organization wants a highly available network service and optimal digital experience for users.
 
 
-![image](/images/erin.png)
+![image](/images/erin2.0.png)
 
 
 ---

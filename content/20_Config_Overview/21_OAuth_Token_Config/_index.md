@@ -4,6 +4,12 @@ chapter = false
 weight = 1
 +++
 
+
+
+> <span style="color: #ff9900;"><i class='fas fa-cog fa-spin fa-sm'></i></span>&nbsp;Reference Only&nbsp;<span style="color: #ff9900;"><i class='fas fa-cog fa-spin fa-sm'></i></span>
+> 
+> This is a read-only section for your reference. The following steps are already performed in your environment.
+
 ## Introduction
 
 The first step in adding the ThousandEyes integration to AppDynamics is to create a **Bearer token**. The Bearer token is a type of access token used by client applications to authenticate themselves to a server, thereby gaining permission to perform certain operations. In your case, the Bearer token **is generated in the Cisco ThousandEyes** platform and then configured in the integration menu in Cisco AppDynamics.

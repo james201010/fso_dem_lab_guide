@@ -7,7 +7,7 @@ date: 2021-01-25T12:52:26-07:00
 
 #### In this "Better Together" story let's explore how AppDynamics and ThousandEyes combined capabilities enable DevOps, AppOps, and NetOps teams to gain a deeper visibility into Digital Experience Monitoring and Application Dependency Monitoring.
 
-![FSO - AppPerforemance](/images/fso_solution_per.png)
+![FSO - AppPerformance](/images/fso_initial_graph.png)
 
 
 ## Learning Objectives  
