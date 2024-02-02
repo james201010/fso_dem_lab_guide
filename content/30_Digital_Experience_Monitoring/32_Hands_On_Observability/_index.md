@@ -210,6 +210,8 @@ AppDynamics Dash Studio, integrated with ThousandEyes Network Insights, offers a
 
 ![image](/images/30_digital_exp_mon/AppD_BRUM_7.png)
 
+> **Note:** This dashboard is shared among students, so it may already contain some data.
+
 <span style="color: #143c76;"><i class='fas fa-circle fa-sm'></i></span>&nbsp; Enter the edit mode.
 
 1. Switch between **View** and **Edit** mode with a button on the top-right of the dash studio.

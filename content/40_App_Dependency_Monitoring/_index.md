@@ -6,7 +6,7 @@ weight = 4
 
 **Re-factoring Bridge-To-Posibili-Tea's application has taken Antonio on a journey of using third party services that allows his team to focus on the features that really impact the business bottom line while some of the needed functionalities are fulfilled by services provided by other companies.**
 
-![image](/images/antonio.png)
+![image](/images/antonio2.0.png)
 
 ---
 

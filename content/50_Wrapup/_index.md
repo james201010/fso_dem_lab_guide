@@ -8,7 +8,7 @@ weight = 30
 <br>
 
 
-![image](/images/50_wrapup/congratulations.png)
+![image](/images/50_wrapup/complete.png)
 
 
 
