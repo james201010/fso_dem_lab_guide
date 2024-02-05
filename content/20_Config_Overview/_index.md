@@ -4,16 +4,11 @@ chapter = false
 weight = 2
 +++
 
+## Introduction
 
 > <span style="color: #ff9900;"><i class='fas fa-cog fa-spin fa-sm'></i></span>&nbsp;Reference Only&nbsp;<span style="color: #ff9900;"><i class='fas fa-cog fa-spin fa-sm'></i></span>
 > 
 > This is a read-only section for your reference. The following steps are already performed in your environment.
-
-## Introduction
-
-<span style="color: #ff9900;"><i class='fas fa-cog fa-spin fa-lg'></i></span>&nbsp; **Hold On A Second ...**
-
-<br>
 
 In this section, you will walk through the configuration steps for integrating AppDynamics and ThousandEyes. These steps are necessary if you are doing a greenfield integration of the two platforms, **but your lab environment will have this preconfigured**. The following sections are provided as a configuration reference, and **the steps are not intended to be replicated in your lab environment**. If the topic title includes  <span style="color: #ff9900;"><i class='fas fa-cog fa-spin fa-sm'></i></span>&nbsp;Reference Only&nbsp;<span style="color: #ff9900;"><i class='fas fa-cog fa-spin fa-sm'></i></span>, the steps in this topic have already been performed in the lab environment and are for your reference and documentation only.
 

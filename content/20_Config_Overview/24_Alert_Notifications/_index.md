@@ -9,9 +9,6 @@ weight = 4
 In this section, you will go through the steps to configure alert notifications from within ThousandEyes to forward ThousandEyes alerts to your AppDynamics application.
 
 
-<br>
-
-
 ## Configure Alert Notifications &nbsp;<span style="color: #ff9900;"><i class='fas fa-cog fa-spin fa-sm'></i></span>&nbsp;Reference Only&nbsp;<span style="color: #ff9900;"><i class='fas fa-cog fa-spin fa-sm'></i></span>
 
 <span style="color: #143c76;"><i class='fas fa-circle fa-sm'></i></span>&nbsp; Configure bi-directional integration with **Alert Notification Service** in the ThousandEyes platform.

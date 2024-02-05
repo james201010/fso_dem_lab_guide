@@ -17,132 +17,109 @@ This use case examines an API that the application uses to process credit card p
 <!-- FULL -->
 
 
-<!-- LITE -->
-
-<span style="color: #143c76;"><i class='fas fa-circle fa-sm'></i></span>&nbsp; Use the credentials used previously to <a href="https://lt.fsolabs.net/20_lab_environment_lt/21_lab_login_steps.html#login-to-appdynamics" target="_blank">**login to the AppDynamics controller**</a> if you've been logged out.
-
-<!-- LITE -->
-
-<!-- PER LITE VS FULL END -->
-
 <br>
 
 ## Payment API Availability
+
+Use the credentials as described in [**login to AppDynamics**]({{< ref "/10_lab_access.html#login-to-appdynamics" >}} "login to AppDynamics"), to access the AppDynamics controller.
 
 <span style="color: #143c76;"><i class='fas fa-circle fa-sm'></i></span>&nbsp; Open your **TeaStore FSO Dashboard** using the steps below.
 
 1. Click on the **Dashboards & Reports** tab on the top menu
 2. Double-click on the dashboard you see in the list (there should be only one)
 
-![image](/images/40_app_depend_mon/payment_api_01.png)
+![image](/images/40_app_depend_mon/ADM_01.png)
 
 
 
-<span style="color: #143c76;"><i class='fas fa-circle fa-sm'></i></span>&nbsp; Scroll to the tiles below **Tiers and Node Transactions** and notice that the **AMEX API Availability** is 0 percent.
+<span style="color: #143c76;"><i class='fas fa-circle fa-sm'></i></span>&nbsp; Scroll to the tiles below **Tiers and Node Transactions** and notice that the **AMEX API Availability** is 0 percent. This percentage means that any application component that uses this API cannot complete a transaction.
 
-This percentage means that any application component that uses this API cannot complete a transaction.
+1. Double-click on the **AMEX API Availability** widget to delve into ThousandEyes and investigate the status of the dependency.
 
-![image](/images/40_app_depend_mon/payment_api_02.png)
+![image](/images/40_app_depend_mon/ADM_02.png)
 
+If you need to login again to ThousandEyes, follow the process in [**login to ThousandEyes**]({{< ref "/10_lab_access.html#login-to-thousandeyes" >}} "login to ThousandEyes") guide.
 
-<br>
+<span style="color: #143c76;"><i class='fas fa-circle fa-sm'></i></span>&nbsp; See the HTTP Server performance.
 
+1. **Status by Phase** immediately suggest that there is a problem on the HTTP side.
 
+![image](/images/40_app_depend_mon/ADM_03.png)
 
-## Diagnose with AppDynamics
+Before making final conclusions, make another check that it's not the network.
 
-<span style="color: #143c76;"><i class='fas fa-circle fa-sm'></i></span>&nbsp; Use the steps below to navigate to your TeaStore application.
+<span style="color: #143c76;"><i class='fas fa-circle fa-sm'></i></span>&nbsp; Inspect the **Network** layer.
 
-1. Click on the **Applications** tab on the top menu
-2. Find your TeaStore application with your lab number in the name and click on its name to open it
+1. Click the **Agent to Server** test view.
+2. Review the graph and network metrics; you'll notice minimal TCP packet loss, and both latency and jitter appear not to be contributing factors to the issue.
 
-![image](/images/40_app_depend_mon/appd_diagnose_01.png)
+![image](/images/40_app_depend_mon/ADM_04.png)
 
+<span style="color: #143c76;"><i class='fas fa-circle fa-sm'></i></span>&nbsp; Inspect the **Web** layer again.
 
-<span style="color: #143c76;"><i class='fas fa-circle fa-sm'></i></span>&nbsp; Now let's use AppDynamics deep diagnostic capabilities to understand if the issue with the AMEX API service stems from within the application iteslf.
+1. Click the **HTTP Server** test layer
+2. Select the **Map** tab.
+3. See the HTTP response code 403.
 
-1. Click on **Errors** under the **Transaction Scorecard**
+![image](/images/40_app_depend_mon/ADM_05.png)
 
-![image](/images/40_app_depend_mon/appd_diagnose_02.png)
+This view indicates that there is a problem with request authorization to the payment gateway.
 
+## Dependencies tested by Test Recommendations
 
+The tests created using **Test Recommendations** provide users with a simple way to create them, based on what is AppDynamics's view of application dependencies. The tests created using this method are automatically tied to Cisco AppDynamics, and provide you with additional ThousandEyes dashboard widgets, where you can see the performance of the applications from AppDynamics perspective. See [**Test Recommendations**]({{< ref "/22_test_recommendations.html" >}}) for setup instructions.
 
-<span style="color: #143c76;"><i class='fas fa-circle fa-sm'></i></span>&nbsp; Use the steps below to open a **Transaction Snapshot** that involves a call to the AMEX API service.
+If you need to login again to ThousandEyes, follow the process in [**login to ThousandEyes**]({{< ref "/10_lab_access.html#login-to-thousandeyes" >}} "login to ThousandEyes") guide.
 
-1. Click on the column indicated to sort the snapshots so the call graphs are at the top of the list
-   - Call graphs are indicated by the blue page icon
-2. Double-click on the snapshot at the top of the list to open it
+<span style="color: #143c76;"><i class='fas fa-circle fa-sm'></i></span>&nbsp; Observe the test created from **Test Recommendations**.
 
-![image](/images/40_app_depend_mon/appd_diagnose_03.png)
+1. In the left menu, select **Views**.
+2. Select the **appd-teastore-fso-lab-**\* test.
+   - The test naming is done automatically from the recommendations.
 
+![image](/images/40_app_depend_mon/ADM_Rec_01.png)
 
+The test layers in tests derived from recommendations are identical to those in any other ThousandEyes test. Currently, only **Agent to Server** tests are supported in the Test Recommendations feature.
 
-<span style="color: #143c76;"><i class='fas fa-circle fa-sm'></i></span>&nbsp; Explore the details of the **Transaction Snapshot** to understand potential root cause of the issue with the AMEX API service.
+<span style="color: #143c76;"><i class='fas fa-circle fa-sm'></i></span>&nbsp; See the test **Dependent Applications**.
 
-1. Notice there was an error when the **teastore-webui** tier called the **AMEX API** service
-2. Click on the **error** at the top of the **Potential Issues** list on the left
-3. Now you see a **403 error** that is related to the AMEX payment processing
+1. Select the **Dependent Applications** tab.
+2. Inspect the list of all applications that use the dependency.
 
-A list of possible reasons for the 403 error follows:
+![image](/images/40_app_depend_mon/ADM_Rec_02.png)
 
-- The API may be unavailable
-- Errors may be occurring in our network that prevents the call to the AMEX processing reaching that processing
-- The infrastructure between our network and the target is experiencing problems, which require investigation with the ISPs between the TeaStore application and the target service
+Observe that multiple applications share the same payment gateway dependency.
 
-![image](/images/40_app_depend_mon/appd_diagnose_04.png)
+<span style="color: #143c76;"><i class='fas fa-circle fa-sm'></i></span>&nbsp; Check the Dashboard made from the test recommendations.
 
+1. In the left menu, navigate to **Dashboards**.
+2. From the dropdown menu, select **App Dependency Dashboard**.
+3. See the **Application Service Health** widget which is available only for tests created from the recommendations.
 
+![image](/images/40_app_depend_mon/ADM_Rec_03.png)
 
+<span style="color: #143c76;"><i class='fas fa-circle fa-sm'></i></span>&nbsp; Leverage the Application Service Health widget in ThousandEyes for a swift transition to Cisco AppDynamics..
 
-<br>
+1. Click the health status widget.
+2. Under **Test Name**, click the name of the application.
 
+![image](/images/40_app_depend_mon/ADM_Rec_04.png)
 
+Clicking the link will direct you to the relevant application dashboard within Cisco AppDynamics. Should login be required at the AppDynamics controller, utilize the credentials provided in [**login to AppDynamics**]({{< ref "/10_lab_access.html#login-to-appdynamics" >}} "login to AppDynamics").
 
-## Diagnose with ThousandEyes
+<span style="color: #143c76;"><i class='fas fa-circle fa-sm'></i></span>&nbsp; Inspect the application dependency in Cisco AppDynamics.
 
-<!-- PER LITE VS FULL START -->
+1. Select the backend named **amex-fso-payment-gw-**\* on the application dashboard's Flow Map and examine its metrics.
 
-<!-- FULL -->
-<!--
-<span style="color: #143c76;"><i class='fas fa-circle fa-sm'></i></span>&nbsp; Use the credentials for ThousandEyes provided by your instructor to <a href="https://performance.fsolabs.net/30_digital_experience_monitoring/31_hands_on_configuration.html#deploy-thousandeyes-agent" target="_blank">**login to ThousandEyes**</a> if you’ve been logged out.
--->
-<!-- FULL -->
+![image](/images/40_app_depend_mon/ADM_Rec_05.png)
 
-
-<!-- LITE -->
-
-<span style="color: #143c76;"><i class='fas fa-circle fa-sm'></i></span>&nbsp; Use the credentials used previously to <a href="https://lt.fsolabs.net/20_lab_environment_lt/21_lab_login_steps.html#login-to-thousandeyes" target="_blank">**login to ThousandEyes**</a> if you've been logged out.
-
-<!-- LITE -->
-
-<!-- PER LITE VS FULL END -->
-
-<span style="color: #143c76;"><i class='fas fa-circle fa-sm'></i></span>&nbsp; Use the steps below with ThousandEyes to verify if the network is a contributing factor with the AMEX service availability.
-
-
-1. Click on the **Cloud & Enterprise Agents** and then **Views** on the left menu
-2. Select the **Tea-Store-AMEX-API-Call** test from the drop-down 
-3. Hover over the **red circle** on the map to inspect the details (**HTTP Server** view must be selected to see the map)
-4. Next click on **Path Visualization** in the left part of the display under **Views** 
-
-![image](/images/40_app_depend_mon/te_diagnose_01.png)
-
-
-<span style="color: #143c76;"><i class='fas fa-circle fa-sm'></i></span>&nbsp; You see that users can access the front end of the application without problems. 
-
-The network on our end is fine.  The displayed paths indicate that the problem resides with the third-party application.  When the API becomes available again ThousandEyes updates the tile in the AppDynamics dashboard indicating the availability. 
-
-The integration between ThousandEyes and AppDynamics provides you with a way to monitor whether any dependencies are meeting their service level agreements (SLA).
-
-![image](/images/40_app_depend_mon/te_diagnose_02.png)
-
-
-
+By leveraging the connection between application dependencies in Cisco ThousandEyes and AppDynamics, you can seamlessly transition from monitoring dependencies from a network perspective to evaluating them through application performance monitoring.
 
 <br>
+
 
 ## Next <span style="color: #143c76;"><i class='fas fa-cog fa-spin fa-sm'></i></span>&nbsp;
 
-Let's find out **what's next!**
+Last step!
 
 <br>

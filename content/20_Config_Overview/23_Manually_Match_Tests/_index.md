@@ -4,17 +4,9 @@ chapter = false
 weight = 3
 +++
 
-
-> <span style="color: #ff9900;"><i class='fas fa-cog fa-spin fa-sm'></i></span>&nbsp;Reference Only&nbsp;<span style="color: #ff9900;"><i class='fas fa-cog fa-spin fa-sm'></i></span>
-> 
-> This is a read-only section for your reference. The following steps are already performed in your environment.
-
 ## Introduction
 
 In this section, you will go through the configuration steps to manually find existing ThousandEyes tests and assign them to a browser RUM application within the AppDynamics controller. This process allows you to add the ThousandEyes tests you want to the Browser App Dashboard in AppDynamics, so you can see more data with fewer tools.
-
-
-<br>
 
 
 ## Manually Match TE Tests &nbsp;<span style="color: #ff9900;"><i class='fas fa-cog fa-spin fa-sm'></i></span>&nbsp;Reference Only&nbsp;<span style="color: #ff9900;"><i class='fas fa-cog fa-spin fa-sm'></i></span>

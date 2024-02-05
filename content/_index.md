@@ -3,9 +3,9 @@ title: "Cisco FSO"
 date: 2021-01-25T12:52:26-07:00
 ---
 
-# FSO DEM and ADM
+# FSO Digital Experience and Application Dependency Monitoring
 
-#### In this "Better Together" story let's explore how AppDynamics and ThousandEyes combined capabilities enable DevOps, AppOps, and NetOps teams to gain a deeper visibility into Digital Experience Monitoring and Application Dependency Monitoring.
+#### In this "Better Together" story let's explore how AppDynamics and ThousandEyes combined capabilities enable DevOps, AppOps, and NetOps teams to gain a deeper visibility into Digital Experience Monitoring (DEM) and Application Dependency Monitoring (ADM).
 
 ![FSO - AppPerformance](/images/fso_initial_graph.png)
 
@@ -33,7 +33,7 @@ This workshop covers four main topics:
 
 ## Next <span style="color: #143c76;"><i class='fas fa-cog fa-spin fa-sm'></i></span>&nbsp;
 
-We'll see how to access the **Lab Environment**.
+Find out how to access the **Lab Environment**.
 
 <br>
 
